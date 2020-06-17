@@ -199,7 +199,7 @@ class ToontownMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI):
             return
 
         # If a config option disables cheaty Magic Words and ours is deemed cheaty, let the invoker know
-        if hasattr(self.air, 'non-cheaty') and self.air.nonCheaty:
+        if hasattr(self.air, 'nonCheaty') and self.air.nonCheaty:
             if not magicWordInfo['administrative']:
                 self.generateResponse(avId=avId, responseType="NonCheaty")
                 return
