@@ -60,8 +60,8 @@ for word in spellbook['words']:
         pass
 
 
-class ToontownOfflineMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI):
-    notify = DirectNotifyGlobal.directNotify.newCategory('ToontownOfflineMagicWordManagerAI')
+class ToontownMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI):
+    notify = DirectNotifyGlobal.directNotify.newCategory('ToontownMagicWordManagerAI')
 
     def requestExecuteMagicWord(self, affectRange, affectType, affectExtra, lastClickedAvId, magicWord):
         avId = self.air.getAvatarIdFromSender()
@@ -75,12 +75,6 @@ class ToontownOfflineMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI)
         toon = self.air.doId2do.get(avId)
         if not toon:
             self.notify.warning('requestExecuteMagicWord: Magic Word use requested but invoker avatar is non-existent!')
-            return
-
-        # If the avId of the invoker is in the Episode Manager, don't allow the use of the Magic Word
-        # Instead, let's just tell the user they can't use it because they're in an Episode
-        if avId in list(self.air.episodeManager.avId2fsm.keys()):
-            self.generateResponse(avId=avId, responseType="Episode")
             return
 
         # Same thing with the Toontorial. Magic Words are strictly forbidden here
@@ -204,8 +198,7 @@ class ToontownOfflineMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI)
             self.generateResponse(avId=avId, responseType="NoAccess")
             return
 
-        # If the server is in legit mode, only allow the use of Administrative Commands
-        # Let the invoker know if the Magic Word they're trying to use isn't administrative
+        # If a config option disables cheaty Magic Words and ours is deemed cheaty, let the invoker know
         if self.air.legitMode:
             if not magicWordInfo['administrative']:
                 self.generateResponse(avId=avId, responseType="LegitServer")
