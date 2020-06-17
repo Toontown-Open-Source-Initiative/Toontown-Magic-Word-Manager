@@ -40,7 +40,7 @@ MAGIC_WORD_RESPONSES = {
     "CannotTarget": 'You cannot target other players with this Magic Word!',
     "Locked": 'You are temporarily locked down and cannot use Magic Words.',
     "RestrictionOther": 'You may only target one other player with this Magic Word!',
-    'LegitServer': 'You cannot use cheaty Magic Words at this time!',
+    'NonCheaty': 'You cannot use cheaty Magic Words at this time!',
     'Tutorial': 'You cannot use Magic Words in the Toontorial!'
 }
 MAGIC_WORD_NO_RESPONSE = "...I don't know how to respond!"
