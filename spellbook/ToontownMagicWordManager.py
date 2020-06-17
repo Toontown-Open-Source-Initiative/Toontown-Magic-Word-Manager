@@ -3,7 +3,7 @@
 ##################################################
 # Author: Benjamin Frisby
 # Copyright: Copyright 2020, Toontown Offline
-# Credits: Benjamin Frisby, John Cote, William Lord, Frank, Nick, Little Cat, Ooowoo
+# Credits: Benjamin Frisby, John Cote, Ruby Lord, Frank, Nick, Little Cat, Ooowoo
 # License: MIT
 # Version: 1.0.0
 # Email: belloqzafarian@gmail.com

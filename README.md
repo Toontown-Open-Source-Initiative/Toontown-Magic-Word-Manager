@@ -15,7 +15,7 @@ Benefits to Toontown Rewritten's "publicly" sourced Magic Word Manager:
 Feel free to use it in any project you wish so long as credit is given to all contributors:
 - Benjamin Frisby
 - John Cote
-- William Lord
+- Ruby Lord
 - Frank
 - Nick
 - Little Cat
