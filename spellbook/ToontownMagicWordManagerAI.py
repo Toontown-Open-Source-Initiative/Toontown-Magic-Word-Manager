@@ -92,7 +92,6 @@ class ToontownMagicWordManagerAI(DistributedObjectAI.DistributedObjectAI):
         # This Magic Word's affectRange is either OTHER (a target) or BOTH (invoker and a target)
         # However, it's also a NORMAL affectType, so it's not as if we're targeting a zone or the whole server
         # In that case, let's try to grab the single target by the lastClickedAvId provided by the invoker
-        lastClickedAvId = 0
         lastClickedToon = None
         if (affectRange in (AFFECT_OTHER, AFFECT_BOTH)) and affectType == AFFECT_NORMAL:
             if lastClickedAvId:
